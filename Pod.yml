@@ -4,9 +4,28 @@ metadata:
   name: webapp
   labels:
     app: webapp
+    release: "0"
 spec:
   containers:
     - name: webapp
       image: richardchesterwood/k8s-fleetman-webapp-angular:release0
       imagePullPolicy: IfNotPresent
   restartPolicy: Always
+
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp-rel-0-5
+  labels:
+    app: webapp
+    release: "0-5"
+spec:
+  containers:
+    - name: webapp-rel-0-5
+      image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5
+      imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fleet-app
+  labels:
+    app: fleet-app
+spec:
+  containers:
+    - name: fleet-app
+      image: richardchesterwood/k8s-fleetman-queue:release2
+      imagePullPolicy: IfNotPresent
+  restartPolicy: Always

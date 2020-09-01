@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: webapp-rs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fleet-app
+  template:
+    metadata:
+      labels:
+        app: fleet-app
+    spec:
+      containers:
+        - name: webapp
+          image: richardchesterwood/k8s-fleetman-webapp-angular:release0-5

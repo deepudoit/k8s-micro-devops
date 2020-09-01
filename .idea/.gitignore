@@ -3,6 +3,8 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-.idea/k8s-micro-devops.iml
-.idea/*.xml
 
+/k8s-micro-devops.iml
+/misc.xml
+/modules.xml
+/vcs.xml
